@@ -13,8 +13,9 @@ struct SwipeAction<Content: View>: View {
     var cornerRadius: CGFloat = 0
     var direction: SwipeDirection = .trailing
     
+    @State var actions: [Action]
+    
     @ViewBuilder var content: Content
-    @ActionBuilder var actions: [Action]
     
     @State private var isEnabled: Bool = true
     

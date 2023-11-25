@@ -22,6 +22,7 @@
 		016023552B11957D001C318C /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016023542B11957D001C318C /* CustomTransition.swift */; };
 		0160235B2B1198DE001C318C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160235A2B1198DE001C318C /* CardView.swift */; };
 		0160235D2B119BFC001C318C /* ScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160235C2B119BFC001C318C /* ScrollViewModel.swift */; };
+		016023612B120172001C318C /* ScrollViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016023602B120172001C318C /* ScrollViewHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		016023542B11957D001C318C /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		0160235A2B1198DE001C318C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0160235C2B119BFC001C318C /* ScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewModel.swift; sourceTree = "<group>"; };
+		016023602B120172001C318C /* ScrollViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		013A90882B0FDFD100C70D08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0160235F2B12013F001C318C /* ScrollHolder */,
 				016023592B1198CB001C318C /* CardView */,
 				013A90892B0FDFD800C70D08 /* Home */,
 			);
@@ -215,6 +218,14 @@
 				0160235A2B1198DE001C318C /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		0160235F2B12013F001C318C /* ScrollHolder */ = {
+			isa = PBXGroup;
+			children = (
+				016023602B120172001C318C /* ScrollViewHolder.swift */,
+			);
+			path = ScrollHolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 			files = (
 				0160235D2B119BFC001C318C /* ScrollViewModel.swift in Sources */,
 				013A90912B0FE68100C70D08 /* Action.swift in Sources */,
+				016023612B120172001C318C /* ScrollViewHolder.swift in Sources */,
 				013A90942B0FE75500C70D08 /* ActionBuilder.swift in Sources */,
 				013A908B2B0FDFE500C70D08 /* HomeView.swift in Sources */,
 				013A90972B0FE81400C70D08 /* SwipeDirection.swift in Sources */,

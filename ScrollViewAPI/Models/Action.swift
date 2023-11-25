@@ -14,6 +14,7 @@ struct Action {
     var iconFont: Font = .title
     var iconTint: Color = .white
     var isEnabled: Bool = true
+    var index: Int
     var action: () -> ()
     
     static func == (lhs: Action, rhs: Action) -> Bool {
@@ -22,7 +23,8 @@ struct Action {
         lhs.icon == rhs.icon &&
         lhs.iconFont == rhs.iconFont &&
         lhs.iconTint == rhs.iconTint &&
-        lhs.isEnabled == rhs.isEnabled
+        lhs.isEnabled == rhs.isEnabled &&
+        lhs.index == rhs.index
     }
 }
 

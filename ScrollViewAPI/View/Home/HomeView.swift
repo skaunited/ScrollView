@@ -8,31 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var colors: [Color] = [.black, .yellow, .purple, .brown]
+//    @State private var colors: [Color] = [.black, .yellow, .purple, .brown]
+    @ActionBuilder var actions: [Action] {
+        Action(tint: .blue, icon: "star.fill", index: 0) {
+            print("Bookmarked")
+        }
+        
+        Action(tint: .red, icon: "trash.fill", index: 0) {
+            print("trash")
+        }
+    }
     
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVStack(alignment: .leading, spacing: 10){
-                ForEach(colors, id: \.self) { color in
-                    SwipeAction(cornerRadius: 10,
-                                direction: .trailing) {
-                        CardView(color: color)
-                    } actions: {
-                        Action(tint: .blue, icon: "star.fill") {
-                            print("Bookmarked")
-                        }
-                        
-                        Action(tint: .red, icon: "trash.fill") {
-                            withAnimation(.easeInOut) {
-                                colors.removeAll { $0 == color }
-                            }
-                        }
-                    }
-                }
-            }
-            .padding(16)
+        ScrollViewHolder(actions: actions) {
+            CardView(color: .yellow)
         }
-        .scrollIndicators(.hidden)
     }
 }
 
